@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.8.1.13230">
+    <workflowProfilesRoot>
+        <workflowProfiles>
+            <workflowProfile name="Corp Segment Planner" parentName="Enterprise Planner" type="BaseInput" cubeName="LRP_CORP" inputTemplateName="" accessGroup="WF_Corporate" maintenanceGroup="SuperUser_Corporate">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="Workflow" attributeValue="ProcessAndCertify" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="LoadOverlappedSiblings" attributeValue="true" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities>
+                    <profileEntity name="CorpOverhead_Total" />
+                    <profileEntity name="Global_Sourcing_Total" />
+                    <profileEntity name="Global_Governance_Total" />
+                    <profileEntity name="Unallocated_Total" />
+                    <profileEntity name="Corp_Affairs_Total" />
+                    <profileEntity name="People_and_Benefits_Total" />
+                    <profileEntity name="Core_Finance_Total" />
+                    <profileEntity name="Corp_Input" />
+                    <profileEntity name="Corporate_Exec_Total" />
+                    <profileEntity name="Other_Corp_Closed_Total" />
+                    <profileEntity name="Total_Tech_Rollup" />
+                    <profileEntity name="Statutory_Accounting_Total" />
+                    <profileEntity name="Other_Corp_Open_Total" />
+                </profileEntities>
+                <profileEntityCalcs />
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.Import" parentName="Corp Segment Planner" type="InputImportChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" maintenanceGroup="Administrators">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="Standard" />
+                            <attribute attributeName="Workflow" attributeValue="SimpleDataLoad" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="DataSource" attributeValue="Data_Hist_LRP_Corp_Allocation" />
+                            <attribute attributeName="IsOptionalLoad" attributeValue="false" />
+                            <attribute attributeName="InsertType" attributeValue="Bulk" />
+                            <attribute attributeName="CanLoadUnrelatedEntities" attributeValue="false" />
+                            <attribute attributeName="FlowNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="BalanceNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ForceBalanceAccountsToYTDView" attributeValue="false" />
+                            <attribute attributeName="CachePageSize" attributeValue="20000" />
+                            <attribute attributeName="CachePagesInMemoryLimit" attributeValue="200" />
+                            <attribute attributeName="CachePageRuleBreakoutInterval" attributeValue="0" />
+                            <attribute attributeName="UseDetailedLogging" attributeValue="false" />
+                            <attribute attributeName="TransformationProfile" attributeValue="LRP_Hist_CorpAlloc" />
+                            <attribute attributeName="ImportDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ValidateDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="LimitToDefaults" attributeValue="false" />
+                            <attribute attributeName="DefaultLoadMethod" attributeValue="Replace" />
+                            <attribute attributeName="BiBlendParameters" attributeValue="" />
+                            <attribute attributeName="DirectLoadParameters" attributeValue="" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                            <attribute attributeName="DataSource" attributeValue="Data_Hist_LRP_Corp_Allocation" />
+                            <attribute attributeName="TransformationProfile" attributeValue="LRP_Hist_CorpAlloc" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                            <attribute attributeName="DataSource" attributeValue="Data_Hist_LRP_Corp_Allocation" />
+                            <attribute attributeName="TransformationProfile" attributeValue="LRP_Hist_CorpAlloc" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes>
+                            <attribute attributeName="DataSource" attributeValue="Data_Hist_LRP_Corp_Allocation" />
+                            <attribute attributeName="TransformationProfile" attributeValue="LRP_Hist_CorpAlloc" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes>
+                            <attribute attributeName="DataSource" attributeValue="Data_Hist_LRP_Corp_Allocation" />
+                            <attribute attributeName="TransformationProfile" attributeValue="LRP_Hist_CorpAlloc" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs />
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.Adj" parentName="Corp Segment Planner" type="InputAdjChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" maintenanceGroup="Administrators">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="Standard" />
+                            <attribute attributeName="Workflow" attributeValue="SimpleJournalInput" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="JournalTemplateProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="JournalProcessGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="JournalApprovalGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="JournalPostGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs />
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.Forms" parentName="Corp Segment Planner" type="InputFormsChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" maintenanceGroup="Administrators">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="Standard" />
+                            <attribute attributeName="Workflow" attributeValue="SimpleFormInput" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="InputFormsProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="OneStream Enterprise Application - TECHSUPPORT_ENT_APP" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes>
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs />
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.01 LRP Cube to Cube Execution" parentName="Corp Segment Planner" type="InputFormsChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="WF_Corporate" maintenanceGroup="SuperUser_Corporate">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="Standard" />
+                            <attribute attributeName="Workflow" attributeValue="Workspace" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="false" />
+                            <attribute attributeName="InputFormsProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="Save Source Scenario CORP_Actual" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="Save Source Scenario Corp" />
+                            <attribute attributeName="Active" attributeValue="true" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs />
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.01a CubeToCube Monthly" parentName="Corp Segment Planner" type="InputImportChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="WF_Corporate" maintenanceGroup="OneStream Enterprise Application - TECHSUPPORT_ENT_APP_ADMINS">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                            <attribute attributeName="Workflow" attributeValue="DataLoadNoCert" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="false" />
+                            <attribute attributeName="DataSource" attributeValue="(Unassigned)" />
+                            <attribute attributeName="IsOptionalLoad" attributeValue="false" />
+                            <attribute attributeName="InsertType" attributeValue="Bulk" />
+                            <attribute attributeName="CanLoadUnrelatedEntities" attributeValue="true" />
+                            <attribute attributeName="FlowNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="BalanceNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ForceBalanceAccountsToYTDView" attributeValue="false" />
+                            <attribute attributeName="CachePageSize" attributeValue="20000" />
+                            <attribute attributeName="CachePagesInMemoryLimit" attributeValue="200" />
+                            <attribute attributeName="CachePageRuleBreakoutInterval" attributeValue="0" />
+                            <attribute attributeName="UseDetailedLogging" attributeValue="false" />
+                            <attribute attributeName="TransformationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ImportDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ValidateDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="WF_Corporate" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="LimitToDefaults" attributeValue="false" />
+                            <attribute attributeName="DefaultLoadMethod" attributeValue="Replace" />
+                            <attribute attributeName="BiBlendParameters" attributeValue="" />
+                            <attribute attributeName="DirectLoadParameters" attributeValue="" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="DataSource" attributeValue="CORP_to_LRP_Actual" />
+                            <attribute attributeName="TransformationProfile" attributeValue="CORP_TR_FDX_LRP_Cube2Cube" />
+                            <attribute attributeName="Text3" attributeValue="Auto_Load_LRP_Actuals" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="Active" attributeValue="true" />
+                            <attribute attributeName="DataSource" attributeValue="CORP_to_LRP_Forecast" />
+                            <attribute attributeName="TransformationProfile" attributeValue="CORP_TR_FDX_LRP_Cube2Cube" />
+                            <attribute attributeName="Text3" attributeValue="Auto_Load_LRP" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs>
+                    <profileEntityCalc entityName="LRP_Walmart_Corp" parentName="(Unassigned)" consName="Local" calcType="ForceConsolidate" scenarioTypeFilter="(All)" confirmed="false" sequence="0" comments="" />
+                </profileEntityCalcs>
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.01b CubeToCube Yearly" parentName="Corp Segment Planner" type="InputImportChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="Everyone" maintenanceGroup="Everyone">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                            <attribute attributeName="Workflow" attributeValue="DataLoadNoCert" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="Everyone" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Active" attributeValue="false" />
+                            <attribute attributeName="DataSource" attributeValue="(Unassigned)" />
+                            <attribute attributeName="IsOptionalLoad" attributeValue="false" />
+                            <attribute attributeName="InsertType" attributeValue="Bulk" />
+                            <attribute attributeName="CanLoadUnrelatedEntities" attributeValue="true" />
+                            <attribute attributeName="FlowNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="BalanceNoDataZeroViewOverride" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ForceBalanceAccountsToYTDView" attributeValue="false" />
+                            <attribute attributeName="CachePageSize" attributeValue="20000" />
+                            <attribute attributeName="CachePagesInMemoryLimit" attributeValue="200" />
+                            <attribute attributeName="CachePageRuleBreakoutInterval" attributeValue="0" />
+                            <attribute attributeName="UseDetailedLogging" attributeValue="false" />
+                            <attribute attributeName="TransformationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ImportDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ValidateDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="Everyone" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="LimitToDefaults" attributeValue="false" />
+                            <attribute attributeName="DefaultLoadMethod" attributeValue="Replace" />
+                            <attribute attributeName="BiBlendParameters" attributeValue="" />
+                            <attribute attributeName="DirectLoadParameters" attributeValue="" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="DataSource" attributeValue="CORP_to_LRP_Actual_Yearly" />
+                            <attribute attributeName="TransformationProfile" attributeValue="CORP_TR_FDX_LRP_Cube2Cube" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="DataSource" attributeValue="CORP_to_LRP_Forecast_Yearly" />
+                            <attribute attributeName="TransformationProfile" attributeValue="CORP_TR_FDX_LRP_Cube2Cube" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs>
+                    <profileEntityCalc entityName="LRP_Walmart_Corp" parentName="(Unassigned)" consName="Local" calcType="ForceConsolidate" scenarioTypeFilter="(All)" confirmed="false" sequence="0" comments="" />
+                </profileEntityCalcs>
+            </workflowProfile>
+            <workflowProfile name="Corp Segment Planner.09 C2C Consolidate Scenario" parentName="Corp Segment Planner" type="InputFormsChild" cubeName="LRP_CORP" inputTemplateName="" accessGroup="WFE_Corporate" maintenanceGroup="WFE_Corporate">
+                <scenarioTypes>
+                    <scenarioType name="(Default)">
+                        <attributes>
+                            <attribute attributeName="ProfileDescription" attributeValue="" />
+                            <attribute attributeName="WorkflowChannel" attributeValue="AllChannelInput" />
+                            <attribute attributeName="Workflow" attributeValue="Workspace" />
+                            <attribute attributeName="WorkflowExecutionGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="WorkspaceDashboardWorkflow" attributeValue="Consolodate_LRP_CORP" />
+                            <attribute attributeName="Active" attributeValue="false" />
+                            <attribute attributeName="InputFormsProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ICMatchingEnabled" attributeValue="false" />
+                            <attribute attributeName="ICMatchingParameters" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CubeViewProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ProcessCubeDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="ConfirmationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="CertificationProfile" attributeValue="(Quick Certify)" />
+                            <attribute attributeName="CertificationSignOffGroup" attributeValue="WFE_Corporate" />
+                            <attribute attributeName="CertificationDashboardProfile" attributeValue="(Unassigned)" />
+                            <attribute attributeName="Text1" attributeValue="" />
+                            <attribute attributeName="Text2" attributeValue="" />
+                            <attribute attributeName="Text3" attributeValue="" />
+                            <attribute attributeName="Text4" attributeValue="" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Actual">
+                        <attributes>
+                            <attribute attributeName="Active" attributeValue="true" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="Administration">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Budget">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Control">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Flash">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Forecast">
+                        <attributes>
+                            <attribute attributeName="Active" attributeValue="true" />
+                        </attributes>
+                    </scenarioType>
+                    <scenarioType name="FXModel">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="History">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="LongTerm">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Model">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Operational">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Plan">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Sustainability">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Target">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Tax">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="Variance">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType1">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType2">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType3">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType4">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType5">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType6">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType7">
+                        <attributes />
+                    </scenarioType>
+                    <scenarioType name="ScenarioType8">
+                        <attributes />
+                    </scenarioType>
+                </scenarioTypes>
+                <profileEntities />
+                <profileEntityCalcs />
+            </workflowProfile>
+        </workflowProfiles>
+    </workflowProfilesRoot>
+</OneStreamXF>

@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.8.1.13230">
+    <dataManagementRoot>
+        <dataManagementGroups>
+            <dataManagementGroup name="Walmart_CORP_to_LRP_Cube2Cube_ImportToStage" description="" accessGroup="Everyone" maintenanceGroup="Everyone">
+                <dataManagementSteps>
+                    <dataManagementStep name="Consolidate" description="" stepType="Calculate">
+                        <stepDefinition>
+                            <DataMgmtCalculateDefinition>
+                                <CalculationType>ForceConsolidate</CalculationType>
+                                <ExecuteHybridSourceDataCopy>Unknown</ExecuteHybridSourceDataCopy>
+                                <Cube>LRP_CORP</Cube>
+                                <EntityFilter>E#LRP_Walmart_Corp</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|WFScenario|</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                            </DataMgmtCalculateDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="Consolidate_Actual" description="" stepType="Calculate">
+                        <stepDefinition>
+                            <DataMgmtCalculateDefinition>
+                                <CalculationType>ForceConsolidate</CalculationType>
+                                <ExecuteHybridSourceDataCopy>Unknown</ExecuteHybridSourceDataCopy>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Walmart_Corp</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#Actual</ScenarioFilter>
+                                <TimeFilter>T#WFYear</TimeFilter>
+                            </DataMgmtCalculateDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="Consolidate_Forecast" description="" stepType="Calculate">
+                        <stepDefinition>
+                            <DataMgmtCalculateDefinition>
+                                <CalculationType>ForceConsolidate</CalculationType>
+                                <ExecuteHybridSourceDataCopy>Unknown</ExecuteHybridSourceDataCopy>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Walmart_CORP.DescendantsInclusive</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|!LRP_Corp_Cube2Cube_scenario!|</ScenarioFilter>
+                                <TimeFilter>T#WFYear</TimeFilter>
+                            </DataMgmtCalculateDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_CORP_Clear" description="" stepType="ClearData">
+                        <stepDefinition>
+                            <DataMgmtClearDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <Cube>LRP_CORP</Cube>
+                                <EntityFilter>E#LRP_Walmart_Corp.DescendantsInclusive</EntityFilter>
+                                <Scenario>|WFScenario|</Scenario>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                                <ProcessImportedData>false</ProcessImportedData>
+                                <ProcessFormsData>true</ProcessFormsData>
+                                <ProcessJournalsAndAdjustments>false</ProcessJournalsAndAdjustments>
+                            </DataMgmtClearDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_Automation_Actuals" description="" stepType="ExecuteBusinessRule">
+                        <stepDefinition>
+                            <DataMgmtExecuteBRDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <BusinessRuleName>FCP_GET_Automation</BusinessRuleName>
+                                <Parameters>wfTop =CORP Segment Planner, T3Tag =Auto_Load_LRP_Actuals, globScen =|WFScenario|, globTime =|WFTime|, DMJobName = [STAGE_LRP_Cube2Cube_Automation_Forecast]</Parameters>
+                            </DataMgmtExecuteBRDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_Automation_Forecast" description="" stepType="ExecuteBusinessRule">
+                        <stepDefinition>
+                            <DataMgmtExecuteBRDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <BusinessRuleName>FCP_GET_Automation</BusinessRuleName>
+                                <Parameters>wfTop =Corp Segment Planner, T3Tag =Auto_Load_LRP, globScen =Forecast, globTime =|WFTime|, DMJobName = [STAGE_LRP_Cube2Cube_Automation_Forecast]</Parameters>
+                            </DataMgmtExecuteBRDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Actual" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\DataExport_Actual.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Omni_Tech_Rollup, E#New_Business_and_Emerging_Tech_Rollup, E#Retail_Tech_Platforms_and_India_Development_Center_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#Actual</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#Balance_Sheet.Base, A#Income_Statement.Base.Remove(A#A500_000.Base) , A#Cash_Flow.Base, A#METRICS.Base</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Actual_Pckg" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\DataExport_Actual.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Omni_Tech_Rollup, E#New_Business_and_Emerging_Tech_Rollup, E#Retail_Tech_Platforms_and_India_Development_Center_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#Actual</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#PK_01.Children.Remove(PK_Vacancy_Adj), A#PK_02.Children, A#PK_03.Children, A#PK_04.Children, A#PK_05.Children, A#PK_06.Children, A#PK_07.Children, A#PK_09.Children, A#PK_10.Children, A#PK_11.Children, A#PK_12.Children, A#PK_13.Children, A#PK_14.Children, A#PK_15.Children, A#PK_16.Children, A#PK_17.Children, A#PK_18.Children, A#PK_19.Children, A#PK_20.Children, A#PK_22.Children, A#PK_23.Children, A#PK_24.Children, A#PK_21.Children, A#PK_25.Children, A#PK_26.Children</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Actual_Yearly" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\DataExport_Actual_Yearly.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Omni_Tech_Rollup, E#New_Business_and_Emerging_Tech_Rollup, E#Retail_Tech_Platforms_and_India_Development_Center_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#Actual</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#Balance_Sheet.Base, A#Income_Statement.Base, A#Cash_Flow.Base, A#METRICS.Base</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Actual_Yearly_Pckg" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\DataExport_Actual_Yearly.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Omni_Tech_Rollup, E#New_Business_and_Emerging_Tech_Rollup, E#Retail_Tech_Platforms_and_India_Development_Center_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#Actual</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#PK_01.Children.Remove(PK_Vacancy_Adj), A#PK_02.Children, A#PK_03.Children, A#PK_04.Children, A#PK_05.Children, A#PK_06.Children, A#PK_07.Children, A#PK_09.Children, A#PK_10.Children, A#PK_11.Children, A#PK_12.Children, A#PK_13.Children, A#PK_14.Children, A#PK_15.Children, A#PK_16.Children, A#PK_17.Children, A#PK_18.Children, A#PK_19.Children, A#PK_20.Children, A#PK_22.Children, A#PK_23.Children, A#PK_24.Children, A#PK_21.Children, A#PK_25.Children, A#PK_26.Children</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Forecast" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\CubeData_Forecast1.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#CORP_GLOBAL_SOURCING, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#CORP_RISK_FINANCE, E#Public_Affairs_State_And_Local, E#Giving, E#CORP_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#CORP_Responsibility, E#Corp_Affairs_Admin, E#CORP_CORPORATE_EXEC, E#CORP_Ethics_and_Compliance, E#CORP_Governance_Admin, E#CORP_Gov_Strategy_And_Operations, E#CORP_LEGAL, E#CORP_CORPORATE_SECRETARY, E#CORP_Investigations, E#CORP_SIGNIFICANT_MATTERS, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#CORP_LABOR_RELATIONS, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Tech_Rollup, E#Core_Services_Retail_Rollup, E#Core_Services_Inventory_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ, E#CORP_NEW_BUS_DEVELOPMENT</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|!LRP_Corp_Cube2Cube_scenario!|</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#Balance_Sheet.Base, A#Income_Statement.Base, A#Cash_Flow.Base, A#METRICS.Base, A#A101_1_wo_IC, A#A101_2_wo_IC, A#A101_3_wo_IC, A#A201_201_wo_IC, A#ROI_DA_in_COGS, A#ROI_Rent_in_COGS, A#ROI_Building_Rent_SGA, A#ROI_Equiment_Rent_SGA</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Pckg" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\CubeData_Forecast2.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#CORP_GLOBAL_SOURCING, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#CORP_RISK_FINANCE, E#Public_Affairs_State_And_Local, E#Giving, E#CORP_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#CORP_Responsibility, E#Corp_Affairs_Admin, E#CORP_CORPORATE_EXEC, E#CORP_Ethics_and_Compliance, E#CORP_Governance_Admin, E#CORP_Gov_Strategy_And_Operations, E#CORP_LEGAL, E#CORP_CORPORATE_SECRETARY, E#CORP_Investigations, E#CORP_SIGNIFICANT_MATTERS, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#CORP_LABOR_RELATIONS, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Tech_Rollup, E#Core_Services_Retail_Rollup, E#Core_Services_Inventory_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ, E#CORP_NEW_BUS_DEVELOPMENT</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|!LRP_Corp_Cube2Cube_scenario!|</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|.Base</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#PK_01.Children.Remove(PK_Vacancy_Adj), A#PK_02.Children, A#PK_03.Children, A#PK_04.Children, A#PK_05.Children, A#PK_06.Children, A#PK_07.Children, A#PK_09.Children, A#PK_10.Children, A#PK_11.Children, A#PK_12.Children, A#PK_13.Children, A#PK_14.Children, A#PK_15.Children, A#PK_16.Children, A#PK_17.Children, A#PK_18.Children, A#PK_19.Children, A#PK_20.Children, A#PK_22.Children, A#PK_23.Children, A#PK_24.Children, A#PK_21.Children, A#PK_25.Children, A#PK_26.Children</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Yearly" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\CubeData_Forecast_Yearly.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Tech_Rollup, E#Core_Services_Retail_Rollup, E#Core_Services_Inventory_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ, E#CORP_NEW_BUS_DEVELOPMENT</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|!LRP_Corp_Cube2Cube_scenario!|</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#Balance_Sheet.Base, A#Income_Statement.Base, A#Cash_Flow.Base, A#METRICS.Base</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Yearly_Pckg" description="" stepType="ExportData">
+                        <stepDefinition>
+                            <DataMgmtExportDataDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <FileShareFileName>|DateForFileName|\CubeData_Forecast_Yearly.csv</FileShareFileName>
+                                <IncludeCubeInFileName>true</IncludeCubeInFileName>
+                                <IncludeEntityInFileName>false</IncludeEntityInFileName>
+                                <IncludeParentInFileName>false</IncludeParentInFileName>
+                                <IncludeConsInFileName>false</IncludeConsInFileName>
+                                <IncludeScenarioInFileName>false</IncludeScenarioInFileName>
+                                <IncludeTimeInFileName>false</IncludeTimeInFileName>
+                                <OverwriteExistingFiles>true</OverwriteExistingFiles>
+                                <IncludeZeros>false</IncludeZeros>
+                                <IncludeMemberDescriptions>false</IncludeMemberDescriptions>
+                                <IncludeCellAnnotations>false</IncludeCellAnnotations>
+                                <IncludeInputData>true</IncludeInputData>
+                                <IncludeCalculatedData>true</IncludeCalculatedData>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Global_Sourcing, E#US08743, E#US08418, E#Global_Holding_Companies, E#CORP_SGSP_WITH_ELIM, E#CorpOverhead, E#Statutory_Accounting, E#Other_Corp_Open, E#Other_Corp_Closed, E#Unallocated, E#Controllers_Group, E#CFO_Procurement, E#Corporate_Strategy, E#Finance_Admin, E#Internal_Audit, E#AFDP, E#Investor_Relations, E#Corporate_Tax,  E#Corporate_Real_Estate, E#Corporate_Finance, E#E3_Finance, E#Next_Generation_Planning, E#Treasury, E#Corp_Risk, E#Public_Affairs_State_And_Local, E#Giving, E#Global_Public_Policy_And_Govt_Affairs, E#Corporate_Communications, E#Global_Responsibility, E#Corp_Affairs_Admin, E#Corporate_Exec, E#Global_Ethics_and_Compliance, E#Global_Governance_Admin, E#Global_Gov_Strategy_And_Operations, E#Legal_Total, E#Corporate_BOD, E#Global_Investigations, E#Legal_Matters, E#CORP_Digital_Citizenship, E#Aviation, E#Global_Security, E#TECH_HR, E#People_Administration, E#Culture_Diversity_Inclusion, E#HR_Support, E#People_Experience, E#Talent_Acquisition, E#Global_Talent_Management, E#People_Transformation, E#WLFC, E#Compensation, E#Benefits, E#CTO_Admin_Rollup, E#Strategy_and_Commercialization, E#US_Tech_Rollup, E#Core_Services_Retail_Rollup, E#Core_Services_Inventory_Rollup, E#Platforms_Rollup, E#Global_Data, E#Business_Services_Rollup, E#InfoSec_Governance_Risk_and_Compliance_Rollup, E#Tech_Finance, E#Sams_Club_CTO_Rollup, E#International_CTO_Rollup, E#Walmart_Corp_Adj, E#WALMART_ENT_ADJ, E#CORP_NEW_BUS_DEVELOPMENT</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <ScenarioFilter>S#|!LRP_Corp_Cube2Cube_scenario!|</ScenarioFilter>
+                                <TimeFilter>T#|WFTime|</TimeFilter>
+                                <ViewFilter>V#Periodic</ViewFilter>
+                                <AccountFilter>A#PK_01.Children.Remove(PK_Vacancy_Adj), A#PK_02.Children, A#PK_03.Children, A#PK_04.Children, A#PK_05.Children, A#PK_06.Children, A#PK_07.Children, A#PK_09.Children, A#PK_10.Children, A#PK_11.Children, A#PK_12.Children, A#PK_13.Children, A#PK_14.Children, A#PK_15.Children, A#PK_16.Children, A#PK_17.Children, A#PK_18.Children, A#PK_19.Children, A#PK_20.Children, A#PK_22.Children, A#PK_23.Children, A#PK_24.Children, A#PK_21.Children, A#PK_25.Children, A#PK_26.Children</AccountFilter>
+                                <FlowFilter>F#Input, F#Input_PEG_Adj, F#Input_USD_Adj</FlowFilter>
+                                <OriginFilter>O#All</OriginFilter>
+                                <ICFilter>I#None</ICFilter>
+                                <UD1Filter>U1#All</UD1Filter>
+                                <UD2Filter>U2#All</UD2Filter>
+                                <UD3Filter>U3#All</UD3Filter>
+                                <UD4Filter>U4#All</UD4Filter>
+                                <UD5Filter>U5#All</UD5Filter>
+                                <UD6Filter>U6#All</UD6Filter>
+                                <UD7Filter>U7#None</UD7Filter>
+                                <UD8Filter>U8#None</UD8Filter>
+                                <DataFilters>
+                                    <DataFilter />
+                                </DataFilters>
+                            </DataMgmtExportDataDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="ROI_Metric_Account_Calc_Actual" description="" stepType="CustomCalculate">
+                        <stepDefinition>
+                            <DataMgmtCustomCalculateDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Walmart_CORP.Base</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <Scenario>Actual</Scenario>
+                                <TimeFilter>T#WFYear.Months</TimeFilter>
+                                <View />
+                                <Account />
+                                <Flow />
+                                <Origin />
+                                <IC />
+                                <UD1 />
+                                <UD2 />
+                                <UD3 />
+                                <UD4 />
+                                <UD5 />
+                                <UD6 />
+                                <UD7 />
+                                <UD8 />
+                                <BusinessRuleName>ROI_Metric</BusinessRuleName>
+                                <FunctionName>ROI_Metric_Calc</FunctionName>
+                                <Parameters />
+                            </DataMgmtCustomCalculateDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                    <dataManagementStep name="ROI_Metric_Account_Calc_Forecast" description="" stepType="CustomCalculate">
+                        <stepDefinition>
+                            <DataMgmtCustomCalculateDefinition>
+                                <UseDetailedLogging>false</UseDetailedLogging>
+                                <Cube>CORP</Cube>
+                                <EntityFilter>E#Walmart_CORP.Base</EntityFilter>
+                                <ParentFilter />
+                                <ConsFilter>C#Local</ConsFilter>
+                                <Scenario>|!LRP_Corp_Cube2Cube_scenario!|</Scenario>
+                                <TimeFilter>T#WFYear.Months</TimeFilter>
+                                <View />
+                                <Account />
+                                <Flow />
+                                <Origin />
+                                <IC />
+                                <UD1 />
+                                <UD2 />
+                                <UD3 />
+                                <UD4 />
+                                <UD5 />
+                                <UD6 />
+                                <UD7 />
+                                <UD8 />
+                                <BusinessRuleName>ROI_Metric</BusinessRuleName>
+                                <FunctionName>ROI_Metric_Calc</FunctionName>
+                                <Parameters />
+                            </DataMgmtCustomCalculateDefinition>
+                        </stepDefinition>
+                    </dataManagementStep>
+                </dataManagementSteps>
+                <dataManagementSequences>
+                    <dataManagementSequence name="CORP_to_LRP_Actual" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Actual" />
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Actual_Pckg" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="CORP_to_LRP_Actual_Yearly" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Actual_Yearly" />
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Actual_Yearly_Pckg" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="CORP_to_LRP_Actuals_Automation" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_CORP_Clear" />
+                            <stepMember name="LRP_Cube2Cube_Automation_Actuals" />
+                            <stepMember name="Consolidate" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="CORP_to_LRP_Forecast" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Forecast" />
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Pckg" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="CORP_to_LRP_Forecast_Automation" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_CORP_Clear" />
+                            <stepMember name="LRP_Cube2Cube_Automation_Forecast" />
+                            <stepMember name="Consolidate" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="CORP_to_LRP_Forecast_Yearly" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Yearly" />
+                            <stepMember name="LRP_Cube2Cube_ImportToStage_DM_Forecast_Yearly_Pckg" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="LRP_CORP_Clear" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="LRP_CORP_Clear" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                    <dataManagementSequence name="LRP_CORP_Consolidate" description="">
+                        <sequenceDefinition>
+                            <DataMgmtSequenceDefinition>
+                                <AppServer />
+                                <Parameters>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                    <Parameter SubstVarName="">
+                                        <DefaultValue />
+                                    </Parameter>
+                                </Parameters>
+                            </DataMgmtSequenceDefinition>
+                        </sequenceDefinition>
+                        <stepMembers>
+                            <stepMember name="Consolidate" />
+                        </stepMembers>
+                    </dataManagementSequence>
+                </dataManagementSequences>
+            </dataManagementGroup>
+        </dataManagementGroups>
+    </dataManagementRoot>
+</OneStreamXF>

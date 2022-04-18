@@ -1,0 +1,1653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.8.1.13230">
+    <applicationDashboardsRoot>
+        <maintenanceUnits>
+            <maintenanceUnit name="10_e_LRP_Cube2Cube" description="" uiPlatformType="WpfOrSilverlight" accessGroup="Everyone" maintenanceGroup="Everyone">
+                <fileResources />
+                <stringResources />
+                <parameters>
+                    <parameter name="LRP_SAMS_C2C_Scenario_Actuals" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>Actual</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>SAMS</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Actual</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_SAMS_Cube2Cube_scenario" description="" userPrompt="" parameterType="LiteralValue" sortOrder="0">
+                        <defaultValue></defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName></cubeName>
+                        <dimType></dimType>
+                        <dimName></dimName>
+                        <memberFilter></memberFilter>
+                    </parameter>
+                    <parameter name="LRP_WmtUS_C2C_Scenario" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>|!LRP_WMTUS_Cube2Cube_scenario!|</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>WMT_US</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Forecast_Working, S#CorpFcst_Submissions.Base, S#Fcst_Submissions.Base</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_Corp_Cube2Cube_scenario" description="" userPrompt="" parameterType="LiteralValue" sortOrder="0">
+                        <defaultValue></defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName></cubeName>
+                        <dimType></dimType>
+                        <dimName></dimName>
+                        <memberFilter></memberFilter>
+                    </parameter>
+                    <parameter name="LRP_WMTUS_Cube2Cube_scenario" description="" userPrompt="" parameterType="LiteralValue" sortOrder="0">
+                        <defaultValue>CorpFcst_Wk16</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName></cubeName>
+                        <dimType></dimType>
+                        <dimName></dimName>
+                        <memberFilter></memberFilter>
+                    </parameter>
+                    <parameter name="LRP_WmtUS_C2C_Scenario_Actuals" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>Actual</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>WMT_US</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Actual</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_CORP_C2C_Scenario_Actuals" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>Actual</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>CORP</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Actual</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_Corp_C2C_Scenario" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>|!LRP_Corp_Cube2Cube_scenario!|</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>WMT_US</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Forecast_Working, S#CorpFcst_Submissions.Base, S#Fcst_Submissions.Base</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_SAMS_C2C_Scenario" description="" userPrompt="" parameterType="MemberList" sortOrder="0">
+                        <defaultValue>|!LRP_SAMS_Cube2Cube_scenario!|</defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName>SAMS</cubeName>
+                        <dimType>Scenario</dimType>
+                        <dimName>Corp_Scenario</dimName>
+                        <memberFilter>S#Forecast_Working, S#CorpFcst_Submissions.Base, S#Fcst_Submissions.Base</memberFilter>
+                    </parameter>
+                    <parameter name="LRP_ENT_Cube2Cube_scenario" description="" userPrompt="" parameterType="LiteralValue" sortOrder="0">
+                        <defaultValue></defaultValue>
+                        <resultFormatStringType>Default</resultFormatStringType>
+                        <resultCustomFormatString></resultCustomFormatString>
+                        <parameterCommandType>Unknown</parameterCommandType>
+                        <sqlQuery></sqlQuery>
+                        <dbLocation>Application</dbLocation>
+                        <externalDBConnName></externalDBConnName>
+                        <methodType>Unknown</methodType>
+                        <methodQuery></methodQuery>
+                        <resultsTableName></resultsTableName>
+                        <displayMember></displayMember>
+                        <valueMember></valueMember>
+                        <displayItems></displayItems>
+                        <valueItems></valueItems>
+                        <cubeName></cubeName>
+                        <dimType></dimType>
+                        <dimName></dimName>
+                        <memberFilter></memberFilter>
+                    </parameter>
+                </parameters>
+                <adapters />
+                <components>
+                    <component name="1A_logo_FX_Rate_Header_Walmart_Copy" description="" xfText="" toolTip="" componentType="Logo">
+                        <displayFormat>BackgroundColor = XFLightGray, Bold = True, FontFamily = Audiowide, FontSize = 18, Height = 55, LabelBold = True, LabelFontFamily = Audiowide, LabelFontSize = 20, LabelPosition = Top, LabelTextColor = XFDarkBlueText, MarginBottom = 2, MarginLeft = 10, MarginTop = 15, TextColor = Black, VerticalAlignment = Top, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_CORP" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{CORP_to_LRP_Forecast_Automation}{CORP_to_LRP_Forecast_Automation}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_CORP_Actuals" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{CORP_to_LRP_Actuals_Automation}{CORP_to_LRP_Actuals_Automation}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_SAMS" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Redraw" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{SAMS_to_LRP_Forecast_Automation}{SAMS_to_LRP_Forecast_Automation}</selectionChangedTaskArgs>
+                        <dashboardsToRedraw>Save Source Scenario SAMS</dashboardsToRedraw>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_SAMS_Actuals" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Redraw" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{SAMS_to_LRP_Actuals_Automation}{SAMS_to_LRP_Actuals_Automation}</selectionChangedTaskArgs>
+                        <dashboardsToRedraw>Save Source Scenario SAMS_Actuals</dashboardsToRedraw>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_WMTUS" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Redraw" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{WMTUS_to_LRP_Forecast_Automation}{WMTUS_to_LRP_Forecast_Automation}</selectionChangedTaskArgs>
+                        <dashboardsToRedraw>Save Source Scenario WMTUS</dashboardsToRedraw>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_Execute_All_WMTUS_Actuals" description="" xfText="" toolTip="Completes all related process in singel click" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="Redraw" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{WMTUS_to_LRP_Actuals_Automation}{WMTUS_to_LRP_Actuals_Automation}</selectionChangedTaskArgs>
+                        <dashboardsToRedraw>Save Source Scenario WMTUS_Actuals</dashboardsToRedraw>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="btn_SaveScenarios_AWSe2" description="" xfText=" " toolTip="" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDashboardExtenderBusinessRule" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>BackgroundColor = Transparent, BorderThickness = 0, Height = 50, HorizontalAlignment = Right, ImageStretch = Uniform, LabelBold = True, LabelFontSize = 15, LabelPosition = Left, MarginLeft = 5, VerticalAlignment = Center, Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{AWSe2_SolutionHelper}{SaveScenarios}{}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>03 Save Data</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Button_CORP" description="" xfText="" toolTip="Clear" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_CORP_Clear}{LRP_CORP_Clear}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>Clear Button.jpg</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Button_ENT" description="" xfText="" toolTip="Clear" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <selectionChangedTaskArgs>{LRP_ENT_Clear}{LRP_ENT_Clear}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>Clear Button.jpg</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Button_LRP_SAMS" description="" xfText="" toolTip="Clear" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_SAMS_Clear}{LRP_SAMS_Clear}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>Clear Button.jpg</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Button_LRP_WMTUS" description="" xfText="" toolTip="Clear" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_WMTUS_Clear}{LRP_WMTUS_Clear}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>Clear Button.jpg</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Description_Footer" description="" xfText="   *Clear data for Cube |WFCube|, Scenario -|WFScenario| and Time period -|WFTime|" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = False, LabelFontSize = 14, UseTextWrapping = True</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Header" description="" xfText="Clearing data for Cube2Cube" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment =Left, LabelBold = True, LabelFontSize = 20</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Clear_Scenario" description="" xfText="Clear Data" toolTip="" componentType="Label">
+                        <displayFormat>LabelBold = True, LabelFontSize = 18, HorizontalAlignment = Left, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Button_LRP_CORP" description="" xfText="" toolTip="Consolidation" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_CORP_Consolidate}{LRP_CORP_Consolidate}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Button_LRP_ENT" description="" xfText="" toolTip="Consolidation" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <selectionChangedTaskArgs>{LRP_ENT_Consolidate}{LRP_ENT_Consolidate}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Button_LRP_SAMS" description="" xfText="" toolTip="Consolidation" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_SAMS_Consolidate}{LRP_SAMS_Consolidate}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Button_LRP_WMTUS" description="" xfText="" toolTip="Consolidation" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="ExecuteDataManagementSequence" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left,BackgroundColor = Transparent, BorderThickness = 0, Height = 50,  Width = 50</displayFormat>
+                        <selectionChangedTaskArgs>{LRP_WMTUS_Consolidate}{LRP_WMTUS_Consolidate}</selectionChangedTaskArgs>
+                        <componentDefinition>
+                            <XFButtonDefinition ButtonType="Standard">
+                                <ImageFileSourceType>DashboardFile</ImageFileSourceType>
+                                <ImageUrlOrFullFileName>WMTUS_App2App_Consolidate</ImageUrlOrFullFileName>
+                                <PageNumber />
+                                <ExcelSheet />
+                                <ExcelNamedRange />
+                            </XFButtonDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Footer" description="" xfText="   *Consolidate data for Cube |WFCube|, Scenario -|WFScenario| and Time period -|WFTime|" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = False, LabelFontSize = 14, UseTextWrapping = True</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Header" description="" xfText="Consolidate data for Cube2Cube" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 20</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Consolidate_Scenario" description="" xfText="Consolidate" toolTip="" componentType="Label">
+                        <displayFormat>LabelBold = True, LabelFontSize = 18, HorizontalAlignment = Center, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_1_HeaderSubTitleLeft" description="" xfText="Cube2Cube Clear - LRP" toolTip="" componentType="Label">
+                        <displayFormat>LabelBold = True, LabelFontSize = 18, HorizontalAlignment = Left, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_1_HeaderSubTitleRight" description="" xfText="Clearing  |WFScenario|   |WFTime|  data for  |WFCube|" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 18</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_1_HeaderTitle" description="" xfText="" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Center, LabelBold = True, LabelFontSize = 18, VerticalAlignment = Center</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_ConsolodatingLeft" description="" xfText="Cube2Cube Consolidating LRP" toolTip="" componentType="Label">
+                        <displayFormat>LabelBold = True, LabelFontSize = 18, HorizontalAlignment = Left, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_ConsolodatingRight" description="" xfText="Consolidating  |WFScenario|  |WFTime| data for  |WFCube|" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 18</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Cube2Cube_ContentTitleMid" description="" xfText="Execute Push to Ent Seg Application" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Right, LabelFontSize = 16, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_CORP_Data_Validations_Summary" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00a_C2C_Corp_Validations_Summary</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_CORP_Data_Validations_Summary_Actuals" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00b_C2C_Corp_Validations_Summary_Actual</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_SAMS_Data_Validations_Summary" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00a_C2C_Sams_Validations_Summary</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_SAMS_Data_Validations_Summary_Actuals" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00b_C2C_SAMS_Validations_Summary_Actual</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_WMTUS_Data_Validations_Summary" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00a_C2C_WMTUS_Validations_Summary</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="CubeView_C2C_WMTUS_Data_Validations_Summary_Actuals" description="" xfText="" toolTip="" componentType="CubeView" boundParameterName="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <componentDefinition>
+                            <XFCubeViewDefinition>
+                                <CubeViewName>00b_C2C_WMTUS_Validations_Summary_Actual</CubeViewName>
+                                <ShowHeader>true</ShowHeader>
+                                <ShowToggleSizeButton>true</ShowToggleSizeButton>
+                            </XFCubeViewDefinition>
+                        </componentDefinition>
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C CORP Data Validations" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C CORP Data Validations">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C CORP Data Validations_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C CORP Data Validations_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C SAMS Data Validations" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C SAMS Data Validations">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C SAMS Data Validations_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C SAMS Data Validations_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C WMTUS Data Validations" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C WMTUS Data Validations">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded C2C WMTUS Data Validations_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="C2C WMTUS Data Validations_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_Description" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_Description">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_CORP" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_CORP">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_CORP_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_CORP_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_CORP_Header" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_CORP_Header">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_ENT" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_ENT">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_SAMS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_SAMS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_SAMS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_SAMS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_WMTUS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_WMTUS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Clear_LRP_WMTUS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Clear_LRP_WMTUS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_CORP" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_CORP">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_CORP_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_CORP_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_CORP_Header" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_CORP_Header">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_ENT" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_ENT">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_SAMS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_SAMS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_SAMS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_SAMS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_WMTUS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_WMTUS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded consolidate_LRP_WMTUS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="consolidate_LRP_WMTUS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolidation_Description" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolidation_Description">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_CORP" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_CORP">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_CORP_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_CORP_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_CORP_Header" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_CORP_Header">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_ENT" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_ENT">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_SAMS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_SAMS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_SAMS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_SAMS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_WMTUS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_WMTUS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Consolodate_LRP_WMTUS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Consolodate_LRP_WMTUS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source _Header" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source _Header">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario Corp" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario Corp">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario CORP_Actual" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario CORP_Actual">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario CORP_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario CORP_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario ENT" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario ENT">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario SAMS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario SAMS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario SAMS_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario SAMS_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario WMTUS" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario WMTUS">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save Source Scenario WMTUS_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save Source Scenario WMTUS_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_Description" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_Description">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_CORP_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_CORP_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_CORP_Content_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_CORP_Content_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_SAMS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_SAMS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_SAMS_Content_Actual" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_SAMS_Content_Actual">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_WMTUS_Content" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_WMTUS_Content">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_WMTUS_Content_Actual" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_WMTUS_Content_Actual">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Embedded Save_Scenario_LRP_WMTUS_Content_Actuals" description="" xfText="" toolTip="" componentType="EmbeddedDashboard" embeddedDashboardName="Save_Scenario_LRP_WMTUS_Content_Actuals">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Execute_All" description="" xfText="Execute All" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 16</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Header_Space" description="" xfText="" toolTip="" componentType="Label">
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="lbl_Execute_All" description="" xfText="Execute All" toolTip="" componentType="Label">
+                        <displayFormat>BackgroundColor = Transparent, BorderThickness = 0, Height = 100, HorizontalAlignment = Center, ImageStretch = Uniform, LabelBold = True, LabelFontSize = 15, LabelPosition = Left, MarginLeft = 5, VerticalAlignment = Center, Width = 80</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Logo_Walmart" description="" xfText="" toolTip="" componentType="Logo">
+                        <displayFormat>Height = 150, HorizontalAlignment = Left, MarginLeft = 50, VerticalAlignment = Center, Width = 150</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save" description="" xfText="Save" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 16</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_Corp" description="" xfText="" toolTip="" componentType="ComboBox" boundParameterName="LRP_Corp_C2C_Scenario" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_CORP_Actuals" description="" xfText="Actuals" toolTip="" componentType="ComboBox" boundParameterName="LRP_CORP_C2C_Scenario_Actuals" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_ENT" description="" xfText="" toolTip="" componentType="ComboBox" boundParameterName="LRP_ENT_Cube2Cube_scenario" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_SAMS" description="" xfText="" toolTip="" componentType="ComboBox" boundParameterName="LRP_SAMS_C2C_Scenario" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_SAMS_Actuals" description="" xfText="Actuals" toolTip="" componentType="ComboBox" boundParameterName="LRP_SAMS_C2C_Scenario_Actuals" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_WMTUS" description="" xfText="" toolTip="" componentType="ComboBox" boundParameterName="LRP_WmtUS_C2C_Scenario" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="Refresh" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save Source Scenario_WMTUS_Actuals" description="" xfText="Actuals" toolTip="" componentType="ComboBox" boundParameterName="LRP_WmtUS_C2C_Scenario_Actuals" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
+                        <displayFormat>HorizontalAlignment = Left, MarginRight = 100, VerticalAlignment = Center, Width = 250</displayFormat>
+                        <adapterMembers />
+                    </component>
+                    <component name="Save_Scenario_Footer" description="" xfText="   *Set scenario for related workflow &amp; run all related workflow steps by Execute All" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = False, LabelFontSize = 14, UseTextWrapping = True</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Source Scenario Header" description="" xfText="Source Scenario for Cube2Cube" toolTip="" componentType="Label">
+                        <displayFormat>HorizontalAlignment = Left, LabelBold = True, LabelFontSize = 20</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                    <component name="Source_Scenario" description="" xfText="Select Source Scenario for data copy  :" toolTip="" componentType="Label">
+                        <displayFormat>LabelBold = True, LabelFontSize = 18, HorizontalAlignment = Center, MarginLeft = 50</displayFormat>
+                        <componentDefinition />
+                        <adapterMembers />
+                    </component>
+                </components>
+                <dashboardGroups>
+                    <dashboardGroup name="Dashboard" description="" accessGroup="Everyone">
+                        <dashboards>
+                            <dashboard name="Clear_Description" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers />
+                            </dashboard>
+                            <dashboard name="Clear_LRP_CORP" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Clear_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_LRP_CORP_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_CORP_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Button_CORP" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_CORP_Header" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="800" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_ENT" description="" pageCaption="" layoutType="Canvas" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="0" top="10" width="250" height="100" dockPosition="Left" />
+                                    <componentMember name="Clear_Scenario" left="0" top="100" width="500" height="100" dockPosition="Left" />
+                                    <componentMember name="Clear_Button_ENT" left="530" top="130" width="50" height="50" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_SAMS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Clear_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_LRP_SAMS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_SAMS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Button_LRP_SAMS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_WMTUS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Clear_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_LRP_WMTUS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Clear_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Clear_LRP_WMTUS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Clear_Button_LRP_WMTUS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_CORP" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded consolidate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded consolidate_LRP_CORP_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_CORP_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_CORP" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_CORP_Header" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="800" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_SAMS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded consolidate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded consolidate_LRP_SAMS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_SAMS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_SAMS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_WMTUS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded consolidate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded consolidate_LRP_WMTUS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="consolidate_LRP_WMTUS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_WMTUS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolidation_Description" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers />
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_CORP" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Consolodate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolodate_LRP_CORP_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_CORP_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_CORP" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_CORP_Header" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="800" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_ENT" description="" pageCaption="" layoutType="Canvas" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="0" top="10" width="250" height="100" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="0" top="100" width="640" height="100" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_WMTUS" left="630" top="130" width="40" height="40" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_ENT" left="630" top="130" width="40" height="40" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_SAMS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Consolodate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolodate_LRP_SAMS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_SAMS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_SAMS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_WMTUS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                            <RowDefinition RowType="Component" Height="200" />
+                                            <RowDefinition RowType="Component" Height="15" />
+                                            <RowDefinition RowType="Line" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Consolodate_LRP_CORP_Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolodate_LRP_WMTUS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Consolidation_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Consolodate_LRP_WMTUS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="200" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Consolidate_Button_LRP_WMTUS" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source _Header" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="200" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="800" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Header_Space" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Source Scenario Header" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario Corp" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_CORP_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C CORP Data Validations" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario CORP_Actual" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_CORP_Content_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C CORP Data Validations_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario ENT" description="" pageCaption="" layoutType="Canvas" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="Logo_Walmart" left="0" top="10" width="250" height="100" dockPosition="Left" />
+                                    <componentMember name="Source_Scenario" left="20" top="150" width="400" height="50" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_ENT" left="450" top="150" width="400" height="50" dockPosition="Left" />
+                                    <componentMember name="btn_SaveScenarios_AWSe2" left="350" top="250" width="200" height="50" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario SAMS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_SAMS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C SAMS Data Validations" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario SAMS_Actuals" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_SAMS_Content_Actual" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C SAMS Data Validations_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario WMTUS" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_WMTUS_Content" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C WMTUS Data Validations" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save Source Scenario WMTUS_Actuals" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="75" />
+                                            <RowDefinition RowType="Component" Height="100" />
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Embedded Save Source _Header" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_LRP_WMTUS_Content_Actual" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded C2C WMTUS Data Validations_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Embedded Save_Scenario_Description" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_Description" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="*" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="*" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers />
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_CORP_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_Corp" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_SaveScenarios_AWSe2" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_CORP" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="lbl_Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_CORP_Content_Actuals" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_CORP_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_CORP_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_SAMS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_SAMS" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_SaveScenarios_AWSe2" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_SAMS" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="lbl_Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_SAMS_Content_Actual" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_SAMS_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_SAMS_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_WMTUS_Content" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_WMTUS" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_SaveScenarios_AWSe2" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_WMTUS" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="lbl_Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="Save_Scenario_LRP_WMTUS_Content_Actual" description="" pageCaption="" layoutType="Grid" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <DashboardDefinition>
+                                    <ShowTitle>true</ShowTitle>
+                                    <GridLayoutDefinition>
+                                        <ColumnDefinitions>
+                                            <ColumnDefinition ColumnType="Component" Width="400" />
+                                            <ColumnDefinition ColumnType="Component" Width="350" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                            <ColumnDefinition ColumnType="Component" Width="40" />
+                                            <ColumnDefinition ColumnType="Component" Width="100" />
+                                        </ColumnDefinitions>
+                                        <RowDefinitions>
+                                            <RowDefinition RowType="Component" Height="70" />
+                                        </RowDefinitions>
+                                    </GridLayoutDefinition>
+                                </DashboardDefinition>
+                                <componentMembers>
+                                    <componentMember name="Source_Scenario" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Save Source Scenario_WMTUS_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="btn_Execute_All_WMTUS_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                    <componentMember name="Execute_All" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                        </dashboards>
+                    </dashboardGroup>
+                    <dashboardGroup name="DashboardComponents" description="" accessGroup="Everyone">
+                        <dashboards>
+                            <dashboard name="C2C CORP Data Validations" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_CORP_Data_Validations_Summary" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="C2C CORP Data Validations_Actuals" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_CORP_Data_Validations_Summary_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="C2C SAMS Data Validations" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_SAMS_Data_Validations_Summary" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="C2C SAMS Data Validations_Actuals" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_SAMS_Data_Validations_Summary_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="C2C WMTUS Data Validations" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_WMTUS_Data_Validations_Summary" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                            <dashboard name="C2C WMTUS Data Validations_Actuals" description="" pageCaption="" layoutType="Uniform" isInitiallyVisible="true" loadDashboardTaskType="NoTask">
+                                <componentMembers>
+                                    <componentMember name="CubeView_C2C_WMTUS_Data_Validations_Summary_Actuals" left="" top="" width="" height="" dockPosition="Left" />
+                                </componentMembers>
+                            </dashboard>
+                        </dashboards>
+                    </dashboardGroup>
+                </dashboardGroups>
+            </maintenanceUnit>
+        </maintenanceUnits>
+    </applicationDashboardsRoot>
+</OneStreamXF>

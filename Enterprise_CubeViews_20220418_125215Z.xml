@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.8.1.13230">
+    <cubeViewsRoot>
+        <cubeViewGroups>
+            <cubeViewGroup name="LRP_00_Rollforward" description="" accessGroup="Everyone" maintenanceGroup="Everyone">
+                <cubeViewItems>
+                    <cubeViewItem name="00a_C2C_Corp_Validations_Summary" description="Cube to Cube Variance Report " isVisibleInProfiles="true" isShortcut="false" shortcutCubeViewName="">
+                        <cubeView>
+                            <pageCaption />
+                            <canModifyData>false</canModifyData>
+                            <canCalculate>true</canCalculate>
+                            <canTranslate>true</canTranslate>
+                            <canConsolidate>true</canConsolidate>
+                            <canModifySuppression>true</canModifySuppression>
+                            <includeCellAttachmentStatus>true</includeCellAttachmentStatus>
+                            <headerFormat>    RowExpansionMode = ExpandAll, ShowDimensionImages = False</headerFormat>
+                            <cellFormat> |!20 Cell Detail Number Adjustment!|, Scale = 0</cellFormat>
+                            <allowSparseRowSuppression>false</allowSparseRowSuppression>
+                            <maxNumUnsuppressedRowsPerCubeViewPage>-1</maxNumUnsuppressedRowsPerCubeViewPage>
+                            <maxNumSecondsToProcessCubeView>-1</maxNumSecondsToProcessCubeView>
+                            <formula><![CDATA[]]></formula>
+                            <reportTaskType>ExecuteCVExtenderBusinessRule</reportTaskType>
+                            <reportBRName>LRP_test</reportBRName>
+                            <reportPaperKind>Unknown</reportPaperKind>
+                            <reportIsLandscape>true</reportIsLandscape>
+                            <reportMarginLeft>-1</reportMarginLeft>
+                            <reportMarginTop>-1</reportMarginTop>
+                            <reportMarginRight>-1</reportMarginRight>
+                            <reportMarginBottom>-1</reportMarginBottom>
+                            <reportAutoFitNumPagesWide>1</reportAutoFitNumPagesWide>
+                            <reportAutoFitToPageWidth>true</reportAutoFitToPageWidth>
+                            <excelExportDisplayGridlines>true</excelExportDisplayGridlines>
+                            <reportTitle>Cube to Cube Variance Report</reportTitle>
+                            <reportHeaderLeftLabel1 />
+                            <reportHeaderLeftLabel2 />
+                            <reportHeaderLeftLabel3 />
+                            <reportHeaderLeftLabel4 />
+                            <reportHeaderCenterLabel1 />
+                            <reportHeaderCenterLabel2 />
+                            <reportHeaderCenterLabel3 />
+                            <reportHeaderCenterLabel4 />
+                            <reportHeaderRightLabel1 />
+                            <reportHeaderRightLabel2 />
+                            <reportHeaderRightLabel3 />
+                            <reportHeaderRightLabel4 />
+                            <reportFooter />
+                            <reportFooterLeftLabel1 />
+                            <reportFooterLeftLabel2 />
+                            <reportFooterLeftLabel3 />
+                            <reportFooterLeftLabel4 />
+                            <reportFooterCenterLabel1 />
+                            <reportFooterCenterLabel2 />
+                            <reportFooterCenterLabel3 />
+                            <reportFooterCenterLabel4 />
+                            <reportFooterRightLabel1 />
+                            <reportFooterRightLabel2 />
+                            <reportFooterRightLabel3 />
+                            <reportFooterRightLabel4 />
+                            <rowSharingType>NotUsed</rowSharingType>
+                            <cubeViewNameForSharingAllRows />
+                            <cubeViewNameForSharingAllRows2>LRP_RF_US_Fuel_TBD</cubeViewNameForSharingAllRows2>
+                            <colSharingType>NotUsed</colSharingType>
+                            <cubeViewNameForSharingAllCols />
+                            <cubeViewNameForSharingAllCols2 />
+                            <cube>
+                                <name>CORP</name>
+                            </cube>
+                            <povMembers>
+                                <entity>
+                                    <name />
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </entity>
+                                <parent>
+                                    <name />
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </parent>
+                                <consolidation>
+                                    <name>Local</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </consolidation>
+                                <scenario>
+                                    <name>|!LRP_Corp_Cube2Cube_scenario!|</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </scenario>
+                                <time>
+                                    <name>WF</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </time>
+                                <view>
+                                    <name>Periodic</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </view>
+                                <account>
+                                    <name />
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </account>
+                                <flow>
+                                    <name>Input</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </flow>
+                                <origin>
+                                    <name>BeforeAdj</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </origin>
+                                <ic>
+                                    <name>None</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ic>
+                                <ud1>
+                                    <name>Tot_Seg_Mdse</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud1>
+                                <ud2>
+                                    <name>CT_Tot</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud2>
+                                <ud3>
+                                    <name>Total_Channel_Fulfillment</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud3>
+                                <ud4>
+                                    <name>Ext_Reported</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud4>
+                                <ud5>
+                                    <name>Status</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud5>
+                                <ud6>
+                                    <name>None</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud6>
+                                <ud7>
+                                    <name>None</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud7>
+                                <ud8>
+                                    <name>None</name>
+                                    <memberFilter />
+                                    <topLevelFilterForNextLevelExp />
+                                </ud8>
+                            </povMembers>
+                            <useDefaultColumnHeaders>true</useDefaultColumnHeaders>
+                            <columnHeaders />
+                            <useDefaultRowHeaders>true</useDefaultRowHeaders>
+                            <rowHeaders />
+                            <reportColumnIndexForRowHeaders>-1</reportColumnIndexForRowHeaders>
+                            <reportColumnHeader1Height>-1</reportColumnHeader1Height>
+                            <reportColumnHeader2Height>-1</reportColumnHeader2Height>
+                            <reportColumnHeader3Height>-1</reportColumnHeader3Height>
+                            <reportColumnHeader4Height>-1</reportColumnHeader4Height>
+                            <reportColumnHeader5Height>-1</reportColumnHeader5Height>
+                            <reportColumnHeader6Height>-1</reportColumnHeader6Height>
+                            <rowHeader1Width>-1</rowHeader1Width>
+                            <excelRowHeader1Width>-1</excelRowHeader1Width>
+                            <reportRowHeader1Width>-1</reportRowHeader1Width>
+                            <rowHeader2Width>-1</rowHeader2Width>
+                            <excelRowHeader2Width>-1</excelRowHeader2Width>
+                            <reportRowHeader2Width>-1</reportRowHeader2Width>
+                            <rowHeader3Width>-1</rowHeader3Width>
+                            <excelRowHeader3Width>-1</excelRowHeader3Width>
+                            <reportRowHeader3Width>-1</reportRowHeader3Width>
+                            <rowHeader4Width>-1</rowHeader4Width>
+                            <excelRowHeader4Width>-1</excelRowHeader4Width>
+                            <reportRowHeader4Width>-1</reportRowHeader4Width>
+                            <rowHeader5Width>-1</rowHeader5Width>
+                            <excelRowHeader5Width>-1</excelRowHeader5Width>
+                            <reportRowHeader5Width>-1</reportRowHeader5Width>
+                            <rowHeader6Width>-1</rowHeader6Width>
+                            <excelRowHeader6Width>-1</excelRowHeader6Width>
+                            <reportRowHeader6Width>-1</reportRowHeader6Width>
+                            <culture>Cube to Cube Variance Report</culture>
+                            <headerTextTypes entity="2000" parent="2000" consolidation="2000" scenario="2000" time="2000" view="2000" account="2000" flow="2000" origin="2000" ic="2000" ud1="2000" ud2="2000" ud3="2000" ud4="2000" ud5="2000" ud6="2000" ud7="2000" ud8="2000" />
+                            <linkedCubeViewNames>C2C_CORP_UD1_Forecast, C2C_CORP_UD2_UD3_Forecast</linkedCubeViewNames>
+                            <linkedDashboardNames />
+                            <boundParameterNames entity="" parent="" consolidation="" scenario="" time="" view="" account="" flow="" origin="" ic="" ud1="" ud2="" ud3="" ud4="" ud5="" ud6="" ud7="" ud8="" />
+                            <columns>
+                                <column name="Blank00" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="" cubeViewColNameForSharing="">
+                                    <width>-1</width>
+                                    <reportWidth>-1</reportWidth>
+                                    <canModifyData>true</canModifyData>
+                                    <colHeaderFormat>    Bold = True, ColumnWidth = 130, FontFamily = Arial, FontSize = 12, IsColumnVisible = False</colHeaderFormat>
+                                    <cellFormat />
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Time</primaryDimType>
+                                            <memberFilter>Name("Flexible Planning")</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroCols>false</suppressZeroCols>
+                                    <suppressNoDataCols>false</suppressNoDataCols>
+                                    <suppressInvalidCols>false</suppressInvalidCols>
+                                    <useSuppressionSettingsOnParentCols>false</useSuppressionSettingsOnParentCols>
+                                    <zeroSuppressionThreshold />
+                                    <useToDetermineRowSuppression>false</useToDetermineRowSuppression>
+                                    <allowSparseRowSuppression>FalseValue</allowSparseRowSuppression>
+                                    <rowOverrides>
+                                        <rowOverride>
+                                            <rowsOrCols range="GMSV" />
+                                            <memberFilter>A#GMSV_TARGET_GROWTH</memberFilter>
+                                            <cellFormat>    WriteableBackgroundColor = LightCoral</cellFormat>
+                                            <cellType>ComboBox</cellType>
+                                            <listParameter>RF_TARGET</listParameter>
+                                        </rowOverride>
+                                        <rowOverride>
+                                            <rowsOrCols range="Net_Sales" />
+                                            <memberFilter>A#GMV_TARGET_VALUE</memberFilter>
+                                            <cellFormat>    WriteableBackgroundColor = LightCoral</cellFormat>
+                                            <cellType>ComboBox</cellType>
+                                            <listParameter>RF_TARGET</listParameter>
+                                        </rowOverride>
+                                    </rowOverrides>
+                                </column>
+                                <column name="Crnt_Year" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="" cubeViewColNameForSharing="">
+                                    <width>-1</width>
+                                    <reportWidth>-1</reportWidth>
+                                    <canModifyData>false</canModifyData>
+                                    <colHeaderFormat>    Bold = True, ColumnWidth = 200, ExcelRightBorderColor = LightGray, FontFamily = Arial, FontSize = 12, IsColumnVisible = True, ReportUseRightBorder = True</colHeaderFormat>
+                                    <cellFormat>    BackgroundColor = LightGray, ShowCurrency = False</cellFormat>
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Time</primaryDimType>
+                                            <memberFilter>T#POV:Name("E&amp;S Cube - |!LRP_Corp_Cube2Cube_scenario!|")</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroCols>false</suppressZeroCols>
+                                    <suppressNoDataCols>false</suppressNoDataCols>
+                                    <suppressInvalidCols>false</suppressInvalidCols>
+                                    <useSuppressionSettingsOnParentCols>true</useSuppressionSettingsOnParentCols>
+                                    <zeroSuppressionThreshold />
+                                    <useToDetermineRowSuppression>true</useToDetermineRowSuppression>
+                                    <allowSparseRowSuppression>TrueValue</allowSparseRowSuppression>
+                                    <rowOverrides />
+                                </column>
+                                <column name="LRP_Fcst" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="" cubeViewColNameForSharing="">
+                                    <width>-1</width>
+                                    <reportWidth>-1</reportWidth>
+                                    <canModifyData>false</canModifyData>
+                                    <colHeaderFormat>    Bold = True, ColumnWidth = 200, ExcelRightBorderColor = LightGray, FontFamily = Arial, FontSize = 12, IsColumnVisible = True, ReportUseRightBorder = True</colHeaderFormat>
+                                    <cellFormat>    BackgroundColor = LightGray, ShowCurrency = False, ColumnWidth = 200</cellFormat>
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Time</primaryDimType>
+                                            <memberFilter>T#POV:Cb#LRP_CORP:S#Forecast:Name("LRP Cube - Forecast")</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroCols>false</suppressZeroCols>
+                                    <suppressNoDataCols>false</suppressNoDataCols>
+                                    <suppressInvalidCols>false</suppressInvalidCols>
+                                    <useSuppressionSettingsOnParentCols>true</useSuppressionSettingsOnParentCols>
+                                    <zeroSuppressionThreshold />
+                                    <useToDetermineRowSuppression>true</useToDetermineRowSuppression>
+                                    <allowSparseRowSuppression>TrueValue</allowSparseRowSuppression>
+                                    <rowOverrides />
+                                </column>
+                                <column name="Difference" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="" cubeViewColNameForSharing="">
+                                    <width>-1</width>
+                                    <reportWidth>-1</reportWidth>
+                                    <canModifyData>false</canModifyData>
+                                    <colHeaderFormat>    Bold = True, ColumnWidth = 130, ExcelRightBorderColor = LightGray, FontFamily = Arial, FontSize = 12, IsColumnVisible = True, ReportUseRightBorder = True</colHeaderFormat>
+                                    <cellFormat>If (CellAmount &lt;&gt; 0 ) Then
+     BackgroundColor = LightPink
+Else
+     BackgroundColor = LightGreen
+End If</cellFormat>
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Time</primaryDimType>
+                                            <memberFilter>GetDataCell(CVC(Crnt_Year) - CVC(LRP_Fcst)):Name("Variance")</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroCols>false</suppressZeroCols>
+                                    <suppressNoDataCols>false</suppressNoDataCols>
+                                    <suppressInvalidCols>false</suppressInvalidCols>
+                                    <useSuppressionSettingsOnParentCols>true</useSuppressionSettingsOnParentCols>
+                                    <zeroSuppressionThreshold />
+                                    <useToDetermineRowSuppression>true</useToDetermineRowSuppression>
+                                    <allowSparseRowSuppression>TrueValue</allowSparseRowSuppression>
+                                    <rowOverrides />
+                                </column>
+                            </columns>
+                            <rows>
+                                <row name="Total" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="99_Template_RF_CoA_Rows" cubeViewRowNameForSharing="NetSales">
+                                    <reportRowHeight>-1</reportRowHeight>
+                                    <canModifyData>false</canModifyData>
+                                    <rowHeaderFormat>    |!03 Detail Header Label Format!| </rowHeaderFormat>
+                                    <cellFormat />
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <enableNavigationLink>false</enableNavigationLink>
+                                    <linkedNavigationItem />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Entity</primaryDimType>
+                                            <memberFilter>E#Walmart_Corp</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                        <memberExpansion>
+                                            <primaryDimType>Account</primaryDimType>
+                                            <memberFilter>A#A401_000:Name("Total Net Sales $"), 
+A#A400_000:Name("Total Gross Profit $"), 
+A#A500_000:Name("Total SGA $"), 
+A#A600_000:Name("Total Membership &amp; Other Income $"), 
+A#A302_104:Name("Total Segment Operating Income $"), 
+A#None:Name(" "),
+A#A100:Name("Total Asset $"),
+A#A200:Name("Total Liability $"),
+A#A300:Name("Total Equity $"),
+A#None:Name(" "),
+A#CF_NetCash:Name("Net Increase (Decrease) In Cash $")</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroRows>false</suppressZeroRows>
+                                    <suppressNoDataRows>false</suppressNoDataRows>
+                                    <suppressInvalidRows>true</suppressInvalidRows>
+                                    <insertSuppressedMemberType>Unknown</insertSuppressedMemberType>
+                                    <useSuppressionSettingsOnParentRows>true</useSuppressionSettingsOnParentRows>
+                                    <zeroSuppressionThreshold />
+                                    <colOverrides>
+                                        <colOverride>
+                                            <rowsOrCols range="LRP_Fcst" />
+                                            <memberFilter>E#LRP_Walmart_Corp</memberFilter>
+                                            <cellFormat />
+                                            <cellType>Unknown</cellType>
+                                            <listParameter />
+                                        </colOverride>
+                                    </colOverrides>
+                                </row>
+                                <row name="GMV" shareSettingsFromAnotherCubeView="false" cubeViewNameForSharing="99_Template_RF_CoA_Rows" cubeViewRowNameForSharing="NetSales">
+                                    <reportRowHeight>-1</reportRowHeight>
+                                    <canModifyData>false</canModifyData>
+                                    <rowHeaderFormat>    |!03 Detail Header Label Format!| </rowHeaderFormat>
+                                    <cellFormat />
+                                    <cellType>Unknown</cellType>
+                                    <listParameter />
+                                    <enableNavigationLink>false</enableNavigationLink>
+                                    <linkedNavigationItem />
+                                    <linkedCubeViewNames />
+                                    <linkedDashboardNames />
+                                    <memberExpansions>
+                                        <memberExpansion>
+                                            <primaryDimType>Entity</primaryDimType>
+                                            <memberFilter>E#Walmart_Corp</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                        <memberExpansion>
+                                            <primaryDimType>Account</primaryDimType>
+                                            <memberFilter>A#GMV</memberFilter>
+                                            <initialIndentLevel>0</initialIndentLevel>
+                                        </memberExpansion>
+                                    </memberExpansions>
+                                    <suppressZeroRows>false</suppressZeroRows>
+                                    <suppressNoDataRows>false</suppressNoDataRows>
+                                    <suppressInvalidRows>true</suppressInvalidRows>
+                                    <insertSuppressedMemberType>Unknown</insertSuppressedMemberType>
+                                    <useSuppressionSettingsOnParentRows>true</useSuppressionSettingsOnParentRows>
+                                    <zeroSuppressionThreshold />
+                                    <colOverrides>
+                                        <colOverride>
+                                            <rowsOrCols range="LRP_Fcst" />
+                                            <memberFilter>E#LRP_Walmart_Corp:A#LRP_DRV_TOTAL_GMV</memberFilter>
+                                            <cellFormat />
+                                            <cellType>Unknown</cellType>
+                                            <listParameter />
+                                        </colOverride>
+                                    </colOverrides>
+                                </row>
+                            </rows>
+                        </cubeView>
+                    </cubeViewItem>
+                </cubeViewItems>
+            </cubeViewGroup>
+        </cubeViewGroups>
+    </cubeViewsRoot>
+</OneStreamXF>
